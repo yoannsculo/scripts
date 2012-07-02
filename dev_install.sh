@@ -6,9 +6,16 @@
 # Install packages
 ################################################################################
 
-sudo apt-get install git gitk\
-		     subversion esvn\
-	     	     meld vim ctags
+DEV_LIST="git gitk \
+	 subversion esvn \
+	 meld vim ctags \
+	 ddd minicom filezilla \
+	 mplayer"
+
+NETWORK_LIST="openssh-server"
+
+sudo apt-get install $DEV_LIST
+sudo apt-get install $NETWORK_LIST
 
 ################################################################################
 # Install vim config
@@ -26,4 +33,3 @@ sudo apt-get install git gitk\
 ################################################################################
 
 echo "Do you want to install personal projects ? (Y/N) y"
-
