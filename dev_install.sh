@@ -32,4 +32,20 @@ sudo apt-get install $NETWORK_LIST
 # Install projets
 ################################################################################
 
+DEV_DIR=~/dev
+
+PROJECTS_LIST="git@github.com:yoannsculo/blog.git \
+	       git@github.com:yoannsculo/SHOUTcast-Recorder.git \
+	       git@github.com:yoannsculo/growl.git
+	       git@github.com:yoannsculo/foxg20-gpio.git \
+	       git@github.com:yoannsculo/Speaker.git \
+	       git@github.com:yoannsculo/config.git \
+	       git@github.com:yoannsculo/ucblog.git"
+
 echo "Do you want to install personal projects ? (Y/N) y"
+
+cd $DEV_DIR
+for i in $PROJECTS_LIST; do
+	git clone $i
+done
+cd -
