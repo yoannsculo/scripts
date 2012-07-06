@@ -14,7 +14,7 @@ do
 	TITRE=`echo $line | cut -d'|' -f1`
 	AUTEURS=`echo $line | cut -d'|' -f2`
 	ISBN13=`echo $line | cut -d'|' -f6`
-	echo "<tr><td>$TITRE</td><td>$AUTEURS</td><td><span class="label label-info">$ISBN13</span></td></tr>"
+	echo "<tr><td>$TITRE</td><td>$AUTEURS</td><td>$ISBN13</td></tr>"
 done
 
 echo "</table>"
